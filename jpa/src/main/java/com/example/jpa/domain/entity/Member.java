@@ -1,5 +1,6 @@
 package com.example.jpa.domain.entity;
 
+import com.example.jpa.domain.type.Gender;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,4 +18,7 @@ public class Member {
     private UUID id;
     @Column(name = "MEMBER_NAME")
     private String name;
+    @Column(name = "MEMBER_GENDER")
+    @Enumerated(EnumType.ORDINAL)
+    private Gender gender;
 }
